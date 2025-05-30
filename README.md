@@ -1,0 +1,1 @@
+# Plugin_Worpress_Galeria_Mapa
