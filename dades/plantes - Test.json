@@ -1,0 +1,164 @@
+{
+  "plantes": [
+    {
+      "id": "auro_blanc",
+      "nom_comu": "Auró blanc",
+      "nom_cientific": "Acer campestre",
+      "familia": "Sapindaceae",
+      "tipus": "arbre",
+      "habitat": [
+        "bosc_mediterrani (zones obertes i marges de camins)",
+        "zones_enjardinades (plantat com a arbre ornamental)"
+      ],
+      "descripcio": "Arbre caducifoli de mida mitjana, amb una alçada que pot arribar fins als 20 metres. Presenta una capçada densa i arrodonida, amb fulles oposades, palmades i de 3 a 5 lòbuls. Les flors són petites, de color groc verdós, agrupades en inflorescències. Els fruits són disàmara amb ales horitzontals.",
+      "caracteristiques": {
+        "floracio": [
+          "primavera"
+        ],
+        "fullatge": "caduc",
+        "alçada": "fins a 20m",
+        "altres_característiques_rellevants": "resistent a la contaminació urbana i utilitzat en alineacions urbanes"
+      },
+      "colors": [
+        "verd",
+        "groc"
+      ],
+      "usos": [
+        "usos ornamentals i paisatgístics",
+        "usos ecològics (fixació de sòl i biodiversitat)"
+      ],
+      "coordenades": [
+        {
+          "lat": 41.501969,
+          "lng": 2.104716
+        }
+      ],
+      "fonts": [
+        "https://en.wikipedia.org/wiki/Acer_campestre",
+        "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/british-trees/a-z-of-british-trees/field-maple/"
+      ]
+    },
+    {
+      "id": "bugula",
+      "nom_comu": "Búgula",
+      "nom_cientific": "Ajuga reptans",
+      "familia": "Lamiaceae",
+      "tipus": "herba",
+      "habitat": [
+        "zones_ombrívoles (sotabosc humit)",
+        "cami_ho_chi_minh (vora de camins ombrívols)"
+      ],
+      "descripcio": "Herba perenne de creixement rastrer que forma catifes denses. Les fulles són ovades, de color verd fosc o porpra. Les flors, de color blau violeta, apareixen en espigues erectes durant la primavera. És una planta ornamental popular per a cobrir sòls en zones ombrívoles.",
+      "caracteristiques": {
+        "floracio": [
+          "primavera"
+        ],
+        "fullatge": "perenne",
+        "alçada": "fins a 0.2m",
+        "altres_característiques_rellevants": "atractiva per a pol·linitzadors i útil per a controlar l'erosió del sòl"
+      },
+      "colors": [
+        "blau",
+        "verd",
+        "violeta"
+      ],
+      "usos": [
+        "usos ornamentals i paisatgístics",
+        "usos ecològics (control d'erosió)"
+      ],
+      "coordenades": [
+        {
+          "lat": 41.501194,
+          "lng": 2.096695
+        },
+        {
+          "lat": 41.497379,
+          "lng": 2.093845
+        }
+      ],
+      "fonts": [
+        "https://en.wikipedia.org/wiki/Ajuga_reptans",
+        "https://plants.ces.ncsu.edu/plants/ajuga-reptans/"
+      ]
+    },
+    {
+      "id": "alissum_groc",
+      "nom_comu": "Alíssum groc",
+      "nom_cientific": "Alyssum alyssoides",
+      "familia": "Brassicaceae",
+      "tipus": "herba",
+      "habitat": [
+        "zones_enjardinades (espais oberts i marges de camins)",
+        "bosc_mediterrani (zones aclarides)"
+      ],
+      "descripcio": "Herba anual de petita mida, amb tiges erectes i fulles estretes de color verd grisenc. Les flors són petites, de color groc pàl·lid, agrupades en raïms terminals. Es troba sovint en sòls sorrencs i zones alterades.",
+      "caracteristiques": {
+        "floracio": [
+          "primavera",
+          "estiu"
+        ],
+        "fullatge": "caduc",
+        "alçada": "fins a 0.3m",
+        "altres_característiques_rellevants": "tolerant a la sequera i sòls pobres"
+      },
+      "colors": [
+        "groc"
+      ],
+      "usos": [
+        "usos ecològics (colonització de sòls degradats)"
+      ],
+      "coordenades": [
+        {
+          "lat": 41.501473,
+          "lng": 2.104998
+        }
+      ],
+      "fonts": [
+        "https://en.wikipedia.org/wiki/Alyssum_alyssoides",
+        "https://gobotany.nativeplanttrust.org/species/alyssum/alyssoides/"
+      ]
+    },
+    {
+      "id": "alissum_maritim",
+      "nom_comu": "Alíssum marítim",
+      "nom_cientific": "Lobularia maritima",
+      "familia": "Brassicaceae",
+      "tipus": "herba",
+      "habitat": [
+        "zones_enjardinades (parterres i rocalles)",
+        "eix_central (zones decoratives)"
+      ],
+      "descripcio": "Planta anual o perenne de curta durada, amb hàbit de creixement rastrer i flors petites, blanques i fragants agrupades en inflorescències denses. Les fulles són estretes i de color verd grisenc. És molt utilitzada en jardineria per la seva floració abundant i aroma dolça.",
+      "caracteristiques": {
+        "floracio": [
+          "primavera",
+          "estiu"
+        ],
+        "fullatge": "caduc",
+        "alçada": "fins a 0.3m",
+        "altres_característiques_rellevants": "atractiva per a pol·linitzadors i fàcil de cultivar"
+      },
+      "colors": [
+        "blanc"
+      ],
+      "usos": [
+        "usos ornamentals i paisatgístics",
+        "usos ecològics (atracció de pol·linitzadors)"
+      ],
+      "coordenades": [
+        {
+          "lat": 41.499195,
+          "lng": 2.108708
+        },
+        {
+          "lat": 41.501847,
+          "lng": 2.10503
+        }
+      ],
+      "fonts": [
+        "https://en.wikipedia.org/wiki/Lobularia_maritima",
+        "https://plants.ces.ncsu.edu/plants/lobularia-maritima/"
+      ]
+    }
+  ]
+}

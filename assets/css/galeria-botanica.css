@@ -1,0 +1,732 @@
+/**
+ * Galeria Botànica UAB
+ * Fitxer: galeria-botanica.css
+ * Estils per a la galeria interactiva de plantes del campus
+ */
+
+/* Estils generals */
+.galeria-botanica {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Contenidor principal de filtres */
+.filtres-contenidor {
+    margin: 20px 0 40px 0; /* Marge superior i inferior més ampli */
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 40px; /* També augmentem el padding intern */
+    border: 2px solid #4CAF50; /* Vora més gran amb color verd */
+}
+
+/* Barra de filtres amb estil horitzontal */
+.filtres-barra {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Estil per a grups de filtres */
+.grup-filtre {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Etiquetes de grups de filtres */
+.etiqueta-filtre {
+    font-weight: bold;
+    color: #555;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+/* Contenidor de botons de filtre */
+.botons-filtre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Estil dels botons de filtre */
+.filtre-boto {
+    padding: 6px 12px;
+    background: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+    font-size: 13px;
+    color: #333;
+    box-shadow: none;
+}
+
+.filtre-boto:hover {
+    background: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+.filtre-boto.actiu {
+    background: #4CAF50;
+    color: white;
+    border-color: #388E3C;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Diferents colors per a diferents grups de filtres */
+.tipus-planta-filtre .filtre-boto.actiu {
+    background: #4CAF50; /* Verd per tipus de planta */
+}
+
+.tipus-imatge-filtre .filtre-boto.actiu {
+    background: #2196F3; /* Blau per tipus d'imatge */
+}
+
+.colors-filtre .filtre-boto.actiu {
+    background: #9C27B0; /* Lila per colors */
+}
+
+.habitat-filtre .filtre-boto.actiu {
+    background: #FF9800; /* Taronja per hàbitat */
+}
+
+.floracio-filtre .filtre-boto.actiu {
+    background: #E91E63; /* Rosa per floració */
+}
+
+.fullatge-filtre .filtre-boto.actiu {
+    background: #795548; /* Marró per fullatge */
+}
+
+.usos-filtre .filtre-boto.actiu {
+    background: #00BCD4; /* Cian per usos */
+}
+
+/* Contenidor de filtres actius */
+.filtres-actius-contenidor {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Camp de cerca */
+.cerca-contenidor {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.cerca-input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.cerca-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.cerca-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.etiqueta-filtres-actius {
+    font-weight: bold;
+    color: #555;
+}
+
+.filtres-actius {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Estil per a cada filtre actiu */
+.filtre-actiu {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #333;
+    margin-right: 5px;
+}
+
+/* Tipus de planta */
+.filtre-actiu[data-group="tipus"] {
+    background: rgba(76, 175, 80, 0.2); /* Verd clar */
+    border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+/* Tipus d'imatge */
+.filtre-actiu[data-group="imatge"] {
+    background: rgba(33, 150, 243, 0.2); /* Blau clar */
+    border: 1px solid rgba(33, 150, 243, 0.5);
+}
+
+/* Color */
+.filtre-actiu[data-group="color"] {
+    background: rgba(156, 39, 176, 0.2); /* Lila clar */
+    border: 1px solid rgba(156, 39, 176, 0.5);
+}
+
+/* Hàbitat */
+.filtre-actiu[data-group="habitat"] {
+    background: rgba(255, 152, 0, 0.2); /* Taronja clar */
+    border: 1px solid rgba(255, 152, 0, 0.5);
+}
+
+/* Floració */
+.filtre-actiu[data-group="floracio"] {
+    background: rgba(233, 30, 99, 0.2); /* Rosa clar */
+    border: 1px solid rgba(233, 30, 99, 0.5);
+}
+
+/* Fullatge */
+.filtre-actiu[data-group="fullatge"] {
+    background: rgba(121, 85, 72, 0.2); /* Marró clar */
+    border: 1px solid rgba(121, 85, 72, 0.5);
+}
+
+/* Usos */
+.filtre-actiu[data-group="usos"] {
+    background: rgba(0, 188, 212, 0.2); /* Cian clar */
+    border: 1px solid rgba(0, 188, 212, 0.5);
+}
+
+/* Botó per eliminar un filtre */
+.eliminar-filtre {
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 14px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.eliminar-filtre:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Botó per netejar tots els filtres */
+.netejar-filtres {
+    padding: 5px 10px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.netejar-filtres:hover {
+    background: #e0e0e0;
+}
+
+/* Graella de plantes */
+.plantes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.planta-item {
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background: white;
+
+}
+
+.planta-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
+.planta-imatge {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.planta-imatge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.planta-item:hover .planta-imatge img {
+    transform: scale(1.05);
+}
+
+.planta-imatge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.planta-item:hover .planta-imatge::after {
+    opacity: 1;
+}
+
+/* Etiqueta del tipus d'imatge */
+.planta-tipus-imatge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(33, 150, 243, 0.85); /* Blau */
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: capitalize;
+    z-index: 2;
+}
+
+.planta-tipus-imatge-detall {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(33, 150, 243, 0.85); /* Blau */
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: capitalize;
+    z-index: 2;
+}
+
+/* Imatge no disponible */
+.planta-sense-imatge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    color: #888;
+    text-align: center;
+    font-style: italic;
+}
+
+.planta-info {
+    padding: 15px;
+}
+
+.planta-info h3 {
+    margin: 0 0 5px;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.nom-cientific {
+    font-style: italic;
+    margin: 0 0 8px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.familia {
+    color: #777;
+    margin: 0;
+    font-size: 0.85em;
+}
+
+.planta-boto-detalls {
+    padding: 0 15px 15px;
+    text-align: center;
+}
+
+.planta-boto-detalls a {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.planta-boto-detalls a:hover {
+    background: #388E3C;
+    transform: translateY(-2px);
+}
+
+/* Modal per a detalls */
+.planta-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.planta-modal.actiu {
+    opacity: 1;
+    display: block;
+}
+
+.planta-modal-contingut {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 1000px;
+    animation: slideDown 0.4s;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.planta-modal-tancar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.planta-modal-tancar:hover {
+    color: #333;
+}
+
+/* Indicador de càrrega */
+.planta-carregant {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Estils per a la vista detallada */
+.planta-detall-individual {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.planta-detall-individual h2 {
+    color: #2e7d32;
+    margin-bottom: 5px;
+}
+
+.planta-detall-individual .nom-cientific {
+    font-style: italic;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.planta-galeria-completa {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.planta-imatge-principal {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.planta-imatge-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.planta-imatges-detall-galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.planta-imatge-detall {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    position: relative;
+}
+
+.planta-imatge-detall img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.planta-imatge-detall:hover img {
+    transform: scale(1.1);
+}
+
+.planta-seccio {
+    margin-bottom: 25px;
+}
+
+.planta-seccio h4 {
+    color: #2e7d32;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.planta-seccio ul {
+    padding-left: 20px;
+}
+
+.planta-seccio li {
+    margin-bottom: 5px;
+}
+
+/* Missatges d'error */
+.planta-error {
+    padding: 15px;
+    background-color: #ffe0e0;
+    border-left: 4px solid #d32f2f;
+    color: #d32f2f;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.galeria-botanica-error {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #666;
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Lightbox per a visualització d'imatges a pantalla completa */
+.planta-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.planta-lightbox.actiu {
+    opacity: 1;
+}
+
+.planta-lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 5px solid white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    transition: transform 0.3s;
+}
+
+.planta-lightbox-tancar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1110;
+}
+
+/* Etiqueta de tipus en el lightbox */
+.planta-lightbox-tipus {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(33, 150, 243, 0.85); /* Blau */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-transform: capitalize;
+    z-index: 1110;
+}
+
+/* Botons de navegació al lightbox */
+.planta-lightbox-anterior,
+.planta-lightbox-seguent {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1110;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.planta-lightbox-anterior:hover,
+.planta-lightbox-seguent:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.planta-lightbox-anterior {
+    left: 20px;
+}
+
+.planta-lightbox-seguent {
+    right: 20px;
+}
+
+/* Media queries per a dispositius mòbils */
+@media (max-width: 992px) {
+    .planta-modal-contingut {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .planta-galeria-completa {
+        grid-template-columns: 1fr;
+    }
+    
+    .planta-imatge-principal {
+        height: 300px;
+    }
+    
+    .planta-imatges-detall-galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .planta-lightbox-anterior,
+    .planta-lightbox-seguent {
+        font-size: 30px;
+        padding: 15px;
+    }
+    
+    .cerca-input {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filtres-barra {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .grup-filtre {
+        width: 100%;
+    }
+    
+    .etiqueta-filtre {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .botons-filtre {
+        width: 100%;
+    }
+    
+    .filtre-boto {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    
+    .plantes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        gap: 15px;
+    }
+    
+    .planta-imatges-detall-galeria {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .planta-imatge-principal {
+        height: 250px;
+    }
+    
+    .planta-lightbox-anterior,
+    .planta-lightbox-seguent {
+        font-size: 24px;
+        padding: 10px;
+    }
+    
+    .cerca-input {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plantes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filtres-contenidor {
+        padding: 10px;
+    }
+    
+    .filtre-boto {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+    
+    .planta-lightbox-anterior {
+        left: 5px;
+    }
+    
+    .planta-lightbox-seguent {
+        right: 5px;
+    }
+}
