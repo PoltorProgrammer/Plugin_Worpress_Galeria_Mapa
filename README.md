@@ -76,5 +76,3 @@ Exemple mínim:
 * **Plug‑in:** [`wp-plugin/README.md`](./wp-plugin/README.md)  
 * **App local:** [`local-app/README.md`](./local-app/README.md)  
 * **Dades:** [`dades/README.md`](./dades/README.md)
-
-_Bon jardí digital!_
