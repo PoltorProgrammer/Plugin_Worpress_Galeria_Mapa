@@ -73,6 +73,6 @@ Exemple mínim:
 
 ## Enllaços ràpids
 
-* **Plug‑in:** [`wp-plugin/README.md`](./wp-plugin/README.md)  
+* **Plug‑in:** [`wp-plugin/README.md`](./Plugin_Worpress_Galeria_Mapa/README.md)  
 * **App local:** [`local-app/README.md`](./local-app/README.md)  
 * **Dades:** [`dades/README.md`](./dades/README.md)
