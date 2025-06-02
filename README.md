@@ -74,5 +74,5 @@ Exemple mínim:
 ## Enllaços ràpids
 
 * **Plug‑in:** [`wp-plugin/README.md`](README.md)  
-* **App local:** [`local-app/README.md`](./local-app/README.md)  
-* **Dades:** [`dades/README.md`](./dades/README.md)
+* **App local:** [`local-app/README.md`](editor_dades/README.md)  
+* **Dades:** [`dades/README.md`](/dades/README.md)
