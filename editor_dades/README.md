@@ -2,7 +2,7 @@
 
 Aplicació HTML/JS autònoma per crear i editar el catàleg (`plantes.json`) i gestionar les imatges sense haver d’entrar al WordPress.
 
-![Pantalla principal](../docs/app-screenshot.png)
+![Pantalla principal](https://raw.githubusercontent.com/PoltorProgrammer/Memoria_TFG_Maig_2025/refs/heads/main/imatges/Interficie_Gestor_Cataleg.png)
 
 ## Com executar-la
 
