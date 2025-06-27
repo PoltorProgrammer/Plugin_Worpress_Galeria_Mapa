@@ -15,16 +15,16 @@ Consta de dos components independents però complementaris:
 
 ```
 /
-├── README.md               ← aquest fitxer
-├── LICENSE                 ← MIT (codi)
-├── LICENSE.DATA            ← CC BY 4.0 (dades i fotografies)
-├── wp-plugin/              ← plug‑in WP
+├── README.md                     ← aquest fitxer
+├── LICENSE                       ← MIT (codi)
+├── LICENSE.DATA                  ← CC BY 4.0 (dades i fotografies)
+├── wp-plugin/                    ← plug‑in WP
 │   ├── galeria-botanica-uab.php
 │   ├── mapa-botanica-uab.php
-│   └── assets/…            ← .css .js i imatges
-├── local-app/              ← app HTML/JS autònoma
+│   └── assets/…                  ← .css .js i imatges
+├── local-app/                    ← app HTML/JS autònoma
 │   └── galeria-botanica-app.html
-└── dades/                  ← base de dades
+└── dades/                        ← base de dades
     └── plantes.json
 
 ```
